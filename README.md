@@ -1,4 +1,5 @@
-Start WiFi as an access point.
+Start WiFi as an access point.<br>
+*AP mode does not support AP scan.*
 
 ```text
 includePath:

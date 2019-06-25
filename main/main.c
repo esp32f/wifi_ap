@@ -61,17 +61,6 @@ static esp_err_t wifi_ap() {
   ERET( esp_wifi_set_config(ESP_IF_WIFI_AP, &wifi_config) );
   printf("- Start WiFi\n");
   ERET( esp_wifi_start() );
-  printf("- Start WiFi AP scan\n");
-  wifi_scan_config_t sconfig = {
-    .ssid = NULL,
-    .bssid = NULL,
-    .channel = 0,
-    .show_hidden = 1,
-    .scan_type = WIFI_SCAN_TYPE_ACTIVE,
-    .scan_time.active.min = 120,
-    .scan_time.active.max = 120
-  };
-  ERET( esp_wifi_scan_start(&sconfig, 0) );
   return ESP_OK;
 }
 
